@@ -12,12 +12,13 @@ They prevent silent drift by cross-checking *intent*, *reasoning*, and *outcome 
 ## 2. Model Diagram (Conceptual)
 
 **Human–AI Synchronization Stack**
+
 [Strategic Layer]
-↳ Intent Definition + Ethical Anchors
+  ↳ Intent Definition + Ethical Anchors
 [Operational Layer]
-↳ Task Adaptation + Integrity Verification
+  ↳ Task Adaptation + Integrity Verification
 [Tactical Layer]
-↳ Real-time Feedback + Confidence Thresholding
+  ↳ Real-time Feedback + Confidence Thresholding
 
 Each layer contains a **Local Integrity Node (LIN)** responsible for:
 - Real-time anomaly detection  
@@ -27,15 +28,19 @@ Each layer contains a **Local Integrity Node (LIN)** responsible for:
 ---
 
 ## 3. Verification Loop (Pseudo-Logic)
+
+```
 loop CognitiveIntegrityCycle:
-capture(state_vector)
-compute(confidence_score)
-if confidence_score < threshold:
-trigger(human_review)
-log(event, context)
-freeze(adaptation_layer)
-else:
-continue_evolution()
+    capture(state_vector)
+    compute(confidence_score)
+    if confidence_score < threshold:
+        trigger(human_review)
+        log(event, context)
+        freeze(adaptation_layer)
+    else:
+        continue_evolution()
+```
+
 This pseudocode illustrates a **pause-and-review protocol** where adaptation stops automatically when ethical confidence dips below a validated threshold.
 
 ---
